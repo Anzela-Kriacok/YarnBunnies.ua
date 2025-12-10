@@ -4,6 +4,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: italic;
+    color: #339eb1;
 }
 
 .logo {
@@ -27,4 +28,24 @@ body {
 .banner h1 {
     font-size: 3rem;
     text-align: center;
+}
+a{
+    color: #339eb1;
+}
+
+header{
+background-color: #ecf4e8;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
 }
