@@ -5,6 +5,15 @@ body {
     font-weight: 300;
     font-style: italic;
     color: #339eb1;
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;    
 }
 
 .logo {
@@ -29,25 +38,37 @@ body {
     font-size: 3rem;
     text-align: center;
 }
-a{
+
+a {
     color: #339eb1;
 }
 
-header{
-background-color: #ecf4e8;
+header {
+    background-color: #ecf4e8;
 }
 
-footer{
+header.fixed {
+    position: fixed;
+    /* Фіксоване позиціонування */
+    top: 0;
+    /* Закріплено зверху */
+    width: 100%;
+    /* Ширина за всю ширину вікна */
+    max-width: 100%;
+    z-index: 100;
+}
+
+footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.social-links{
+.social-links {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    
+
 }
 
 .cart-btn {
@@ -61,7 +82,8 @@ footer{
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 0.9em;
-    font-family: "Ubuntu", sans-serif;;
+    font-family: "Ubuntu", sans-serif;
+    ;
     border: none;
     position: relative;
     cursor: pointer;
@@ -112,6 +134,7 @@ footer{
     right: 0;
     /* Відступ справа */
 }
+
 .text-my-card {
     font-size: 1rem;
     font-weight: 600;
@@ -128,6 +151,7 @@ footer{
     font-size: 0.7rem;
 
 }
+
 .price-card {
     font-size: 1rem;
     line-height: 1rem;
@@ -154,6 +178,7 @@ footer{
     flex-wrap: wrap;
     margin-bottom: 72px;
 }
+
 .my-card {
     padding: 28px;
     background: transparent;

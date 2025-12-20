@@ -56,3 +56,6 @@ orderBtn.addEventListener("click", function (event) {
         })
 })
 
+orderBtn.addEventListener("click", function (event) {
+    alert("Дякуємо за замовлення! Ми зв'яжемося з вами найближчим часом.")
+})
