@@ -14,7 +14,7 @@ body {
 .banner {
     width: 100%;
     height: 90vh;
-    background: url('../img/1.avif');
+    background: url('../img/1.jpg') no-repeat center center;
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -47,6 +47,7 @@ footer{
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    
 }
 
 .cart-btn {
@@ -55,17 +56,25 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: linear-gradient(to left, rgb(173, 154, 255), rgb(149, 110, 255));
-    border-radius: 30px;
+    background: #919c8b;
+    border-radius: 10px;
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 0.9em;
-    font-family: "Martian Mono", monospace;
+    font-family: "Ubuntu", sans-serif;;
     border: none;
     position: relative;
     cursor: pointer;
     transition-duration: .2s;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .cart-btn {
+        margin-top: 0;
+        margin-left: 10px;
+    }
 }
 
 .bell {
@@ -74,9 +83,8 @@ footer{
 
 
 .cart-btn:hover {
-    background: linear-gradient(to left, rgb(154, 131, 255), rgb(135, 91, 255));
+    background: #464a42;
 }
-
 
 .cart-btn:active {
     transform: scale(0.97);
@@ -94,7 +102,7 @@ footer{
 .cart-counter {
     background: #fff;
     font-size: small;
-    color: rgb(135, 91, 255);
+    color: #919c8b;
     border-radius: 100px;
     padding: 0 .2em;
     position: absolute;
