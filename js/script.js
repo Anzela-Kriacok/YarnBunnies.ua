@@ -130,3 +130,8 @@ function addToCart(event) {
     cart.addItem(product);
     console.log(cart);
 }
+function searchProducts(event){
+    event.preventDefault()
+    
+
+}
