@@ -130,8 +130,34 @@ function addToCart(event) {
     cart.addItem(product);
     console.log(cart);
 }
-function searchProducts(event){
-    event.preventDefault()
-    
 
+// Функція пошуку товарів
+function searchProducts(event) {
+    event.preventDefault(); // Запобігає перезавантаженню сторінки при відправці форми
+
+    let query = document.querySelector('#searchForm input').value.toLowerCase();
+    let productsList = document.querySelector('.products-list');
+    productsList.innerHTML = ''; // Очищуємо список товарів
+
+    // Відображаємо товари на сторінці
+    getProducts().then(function (products) {
+        let productsList = document.querySelector('.products-list')
+        products.forEach(function (product) {
+            if (product.title.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)) {
+                productsList.innerHTML += getCardHTML(product)
+            }
+        })
+// Отримуємо всі кнопки "Купити" на сторінці
+        let buyButtons = document.querySelectorAll('.products-list .cart-btn');
+        // Навішуємо обробник подій на кожну кнопку "Купити"
+        if (buyButtons) {
+            buyButtons.forEach(function (button) {
+                button.addEventListener('click', addToCart);
+            });
+        }
+    })
 }
+
+// Навішуємо обробник подій на форму пошуку
+let searchForm = document.querySelector('#searchForm')
+searchForm.addEventListener('submit', searchProducts);
